@@ -1,0 +1,19 @@
+ja:
+  button:
+    edit: 編集
+    back: 戻る
+    show: 詳細
+    index: 一覧
+    destroy: 削除
+    new_book: 新しい本の登録
+  column:
+    title: タイトル
+    memo: メモ
+    author: 著者
+    picture: 写真
+  header:
+    books: 本の一覧
+    new_book: 新しい本の登録
+    editing_book: 内容の編集
+
+
