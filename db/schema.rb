@@ -21,12 +21,4 @@ ActiveRecord::Schema.define(version: 2021_07_31_111944) do
     t.string "picture"
   end
 
-  create_table "ideas", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "picture"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
 end
