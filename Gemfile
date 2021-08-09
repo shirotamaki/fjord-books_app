@@ -56,5 +56,3 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'carrierwave'
-
-gem 'i18n_generators'
