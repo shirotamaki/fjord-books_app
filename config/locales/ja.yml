@@ -221,6 +221,13 @@ ja:
       previous: '前'
       next: '次'
       truncate: '...'
+    layouts:
+      Logged_in_as: 'ログイン名: '
+      Edit_profile: 'プロフィール編集'
+      Logout: 'ログアウト'
+      Sign_up: 'サインアップ'
+      Login: 'ログイン'
+
   controllers:
     common:
       notice_create: "%{name}が作成されました。"
