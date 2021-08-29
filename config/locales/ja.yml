@@ -227,6 +227,7 @@ ja:
       Logout: 'ログアウト'
       Sign_up: 'サインアップ'
       Login: 'ログイン'
+      List: 'ユーザー一覧'
 
   controllers:
     common:
