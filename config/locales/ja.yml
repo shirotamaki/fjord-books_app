@@ -222,12 +222,13 @@ ja:
       next: '次'
       truncate: '...'
     layouts:
-      Logged_in_as: 'ログイン名: '
+      Logged_in_as: 'ログインアドレス: '
       Edit_profile: 'プロフィール編集'
       Logout: 'ログアウト'
       Sign_up: 'サインアップ'
       Login: 'ログイン'
       List: 'ユーザー一覧'
+      Show: 'ユーザー詳細'
 
   controllers:
     common:
