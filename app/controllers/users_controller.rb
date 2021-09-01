@@ -6,10 +6,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = if request.path == '/users/show'
-              current_user
-            else
-              User.find(params[:id])
-            end
+    @user = current_user
   end
 end
