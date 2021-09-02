@@ -1,4 +1,4 @@
-<h1><%= User.model_name.human %>詳細</h1>
+<h1><%= User.model_name.human %><%= t('views.layouts.Detail') %></h1>
 
 <p><%= User.human_attribute_name(:email) %></p>
 <%= @user.email %>

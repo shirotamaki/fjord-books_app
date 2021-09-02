@@ -19,9 +19,9 @@
   <p class="navbar-text pull-right">
     <% if user_signed_in? %>
       <%= t('views.layouts.Logged_in_as') %><strong><%= current_user.email %></strong>.
-      <%= link_to t('views.layouts.Show'), users_show_path, class: 'navbar-link' %> |
+      <%= link_to t('views.layouts.User_show'), users_show_path, class: 'navbar-link' %> |
       <%= link_to t('views.layouts.Edit_profile'), edit_user_registration_path, class: 'navbar-link' %> |
-      <%= link_to t('views.layouts.List'), users_index_path, class: 'navbar-link' %> |
+      <%= link_to t('views.layouts.User_list'), users_index_path, class: 'navbar-link' %> |
       <%= link_to t('views.layouts.Logout'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
     <% else %>
       <%= link_to t('views.layouts.Sign_up'), new_user_registration_path, class: 'navbar-link' %> |

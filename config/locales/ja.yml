@@ -227,8 +227,10 @@ ja:
       Logout: 'ログアウト'
       Sign_up: 'サインアップ'
       Login: 'ログイン'
-      List: 'ユーザー一覧'
-      Show: 'ユーザー詳細'
+      List: '一覧'
+      Detail: '詳細'
+      User_show: 'ユーザー詳細'
+      User_list: 'ユーザー一覧'
 
   controllers:
     common:
