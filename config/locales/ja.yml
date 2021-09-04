@@ -221,7 +221,8 @@ ja:
       previous: '前'
       next: '次'
       truncate: '...'
-    layouts:
+  layouts:
+    application:
       Logged_in_as: 'ログインアドレス: '
       Edit_profile: 'プロフィール編集'
       Logout: 'ログアウト'
@@ -231,6 +232,9 @@ ja:
       Detail: '詳細'
       User_show: 'ユーザー詳細'
       User_list: 'ユーザー一覧'
+  users:
+    index:
+      title: 'ユーザー一覧'
 
   controllers:
     common:
