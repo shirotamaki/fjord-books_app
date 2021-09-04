@@ -234,7 +234,9 @@ ja:
       User_list: 'ユーザー一覧'
   users:
     index:
-      title: 'ユーザー一覧'
+      List: '一覧'
+    show:
+      Detail: '詳細'
 
   controllers:
     common:
