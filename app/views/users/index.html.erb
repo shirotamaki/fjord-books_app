@@ -17,8 +17,6 @@
       <tr>
         <% if user.image.attached? %>
           <td><%= image_tag user.image, class:"image" %></td>
-        <% else %>
-          <td></td>
         <% end %>
         <td><%= user.email %></td>
         <td><%= user.name %></td>
