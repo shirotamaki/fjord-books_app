@@ -15,11 +15,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <% if user.image.attached? %>
-          <td><%= image_tag user.image.variant(resize: "100x100") %></td>
-        <% else %>
-          <td></td>
-        <% end %>
+        <td><%= image_tag user.image.variant(resize: "100x100") if user.image.attached? %></td>
         <td><%= user.email %></td>
         <td><%= user.name %></td>
         <td><%= user.postal_code %></td>
