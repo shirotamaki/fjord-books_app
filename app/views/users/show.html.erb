@@ -33,7 +33,21 @@
   <% end %>
 </p>
 
-<% if current_user == @user %>
+<!--フォロー数、フォロワー数の表示-->
+<p>
+  フォロー数:<%= link_to @user.followed_users.count, user_followed_users_path(@user) %>
+  <br>
+  フォロワー数:<%= link_to @user.follower_users.count, user_follower_users_path(@user) %>
+</p>
+
+
+<!--フォローボタン、フォロー解除ボタンの設置-->
+<%= form_with model: @followed_users do |form| %>
+  <%= form.submit "フォローする" %>
+<% end %>
+
+
+<% if current_user == @user.follower_relationships %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
 <%= link_to t('views.common.back'), users_path %>
