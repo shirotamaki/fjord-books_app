@@ -1,0 +1,7 @@
+<% @followers.each do |follower_user|%>
+  <ul>
+    <li><%= follower_user.name %></li>
+  </ul>
+<% end %>
+
+<%= link_to t('views.common.back'), user_path(params[:user_id]) %>
