@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2021_09_08_095030) do
   end
 
   create_table "active_storage_variant_records", force: :cascade do |t|
-    t.bigint "blob_id", null: false
+    t.integer "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
@@ -77,6 +77,4 @@ ActiveRecord::Schema.define(version: 2021_09_08_095030) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "relationships", "users", column: "followed_id"
-  add_foreign_key "relationships", "users", column: "follower_id"
 end
