@@ -241,4 +241,4 @@ ja:
   follow:
       button:
         unfollow_user: "フォロー解除"
-        follow_user: "フォロー"
+        follow_user: "フォローする"
