@@ -8,15 +8,15 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: 'Relationship', foreign_key: :followed_id, dependent: :destroy, inverse_of: 'followed'
   has_many :followers, through: :passive_relationships, source: :follower
 
-  def follow(other_user)
-    active_relationships.create(followed_id: other_user)
+  def follow(other_user_id)
+    active_relationships.create(followed_id: other_user_id)
   end
 
-  def unfollow(other_user)
-    active_relationships.find_by(followed_id: other_user).destroy
+  def unfollow(other_user_id)
+    active_relationships.find_by(followed_id: other_user_id).destroy
   end
 
-  def following?(other_user)
-    following.include?(other_user)
+  def following?(other_user_id)
+    following.include?(other_user_id)
   end
 end
