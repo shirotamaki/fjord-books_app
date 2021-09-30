@@ -75,24 +75,4 @@ User.order(:id).each do |user|
   user.avatar.attach(io: URI.parse(image_url).open, filename: 'avatar.png')
 end
 
-Relationship.create!(
-  follower_id: 1,
-  followed_id: 2
-)
-
-Relationship.create!(
-  follower_id: 1,
-  followed_id: 3
-)
-
-Relationship.create!(
-  follower_id: 2,
-  followed_id: 3
-)
-
-Relationship.create!(
-  follower_id: 3,
-  followed_id: 1
-)
-
 puts '初期データの投入が完了しました。' # rubocop:disable Rails/Output
