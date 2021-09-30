@@ -212,6 +212,10 @@ ja:
       destroy: 削除
       new: 新規作成
       back: 戻る
+      following_list: フォロー一覧
+      followers_list: フォロワー一覧
+      following_count: フォロー数：
+      followers_count: フォロワー数：
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"

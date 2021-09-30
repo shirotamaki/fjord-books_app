@@ -33,11 +33,18 @@
   <% end %>
 </p>
 
-<p>
-  フォロー数:<%= link_to @user.following.count, user_following_index_path(@user) %>
-  <br>
-  フォロワー数:<%= link_to @user.followers.count, user_followers_path(@user) %>
-</p>
+<table>
+  <tbody>
+    <tr>
+      <td><%= t('views.common.following_count') %></td>
+      <td><%= link_to @user.following.count, user_following_index_path(@user) %></td>
+    </tr>
+    <tr>
+      <td><%= t('views.common.followers_count') %></td>
+      <td><%= link_to @user.followers.count, user_followers_path(@user) %></td>
+    </tr>
+  </tbody>
+</table>
 
 <p>
   <% unless current_user == @user %>

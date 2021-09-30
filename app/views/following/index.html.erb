@@ -1,7 +1,31 @@
-<% @following.each do |followed_user|%>
-  <ul>
-    <li><%= followed_user.name %></li>
-  </ul>
-<% end %>
+<h1><%= t('views.common.following_list') %></h1>
 
-<%= link_to t('views.common.back'), user_path(params[:user_id]) %>
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <th><%= User.human_attribute_name(:name) %></th>
+      <th><%= User.human_attribute_name(:postal_code) %></th>
+      <th><%= User.human_attribute_name(:address) %></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @following.each do |followed_user|%>
+      <tr>
+        <td><%= image_tag followed_user.avatar.variant(resize_to_fill: [30, 30])%></td>
+        <td><%= followed_user.email %></td>
+        <td><%= followed_user.name %></td>
+        <td><%= followed_user.postal_code %></td>
+        <td><%= followed_user.address %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td><%= link_to t('views.common.back'), user_path(@user) %></td>
+    </tr>
+  </tfoot>
+</table>
