@@ -212,10 +212,6 @@ ja:
       destroy: 削除
       new: 新規作成
       back: 戻る
-      following_list: フォロー一覧
-      followers_list: フォロワー一覧
-      following_count: フォロー数：
-      followers_count: フォロワー数：
       delete_confirm: よろしいですか？
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
@@ -242,7 +238,14 @@ ja:
     registrations:
       edit:
         title: "アカウント編集"
-  follow:
-      button:
-        unfollow_user: "フォロー解除"
-        follow_user: "フォローする"
+  users:
+    button:
+      unfollow_user: "フォロー解除"
+      follow_user: "フォローする"
+    count:
+      following: フォロー数：
+      followers: フォロワー数：
+  followers:
+    list: フォロワー一覧
+  following:
+    list: フォロー一覧
