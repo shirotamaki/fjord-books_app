@@ -10,7 +10,7 @@
   </thead>
 
   <tbody>
-  <% @followers.each do |follower|%>
+  <% followers.each do |follower|%>
     <tr>
       <td><%= image_tag follower.avatar.variant(resize_to_fill: [30, 30])%></td>
       <td><%= follower.email %></td>

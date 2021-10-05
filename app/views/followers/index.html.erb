@@ -1,3 +1,3 @@
 <h1><%= t('followers.list') %></h1>
 
-<%= render partial: 'shared/followers' %>
+<%= render partial: 'shared/followers', locals: {followers: @followers} %>
