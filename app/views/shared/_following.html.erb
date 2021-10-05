@@ -10,13 +10,13 @@
   </thead>
 
   <tbody>
-  <% @follow.each do |follower|%>
+  <% @following.each do |followed_user|%>
     <tr>
       <td><%= image_tag follower.avatar.variant(resize_to_fill: [30, 30])%></td>
-      <td><%= follower.email %></td>
-      <td><%= follower.name %></td>
-      <td><%= follower.postal_code %></td>
-      <td><%= follower.address %></td>
+      <td><%= followed_user.email %></td>
+      <td><%= followed_user.name %></td>
+      <td><%= followed_user.postal_code %></td>
+      <td><%= followed_user.address %></td>
     </tr>
   <% end %>
   </tbody>
