@@ -15,4 +15,19 @@ class User < ApplicationRecord
   # 受動的：フォローされる
   has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
   has_many :followers, through: :passive_relationships, source: :follower
+
+  # ユーザーをフォローする
+  def follow(other_user)
+    following << other_user
+  end
+
+  # ユーザーをフォロー解除する
+  def unfollow(other_user_id)
+    active_relationships.find_by(followed_id: other_user_id).destroy
+  end
+
+  # 現在のユーザーがフォローしていたらtrueを返す
+  def following?(other_user)
+    following.include?(other_user)
+  end
 end
