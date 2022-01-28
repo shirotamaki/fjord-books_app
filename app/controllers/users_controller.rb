@@ -16,6 +16,7 @@ class UsersController < ApplicationController
     @users = @user.following.order(:id)
     render 'show_follow'
   end
+
   # フォロワー一覧
   # GET /users/:id/followers
   def followers
