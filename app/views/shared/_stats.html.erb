@@ -2,14 +2,14 @@
 <div>
   <p>
     <a href="<%= following_user_path(@user) %>">
-      following
+      <%= t('users.count.following') %>
       <%= @user.following.count %>
     </a>
   </p>
 
   <p>
     <a href="<%= followers_user_path(@user) %>">
-      followers
+      <%= t('users.count.followers') %>
       <%= @user.followers.count %>
     </a>
   </p>
