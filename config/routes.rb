@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'relationships/following'
-  get 'relationships/followers'
+  get 'friendships/following'
+  get 'friendships/followers'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   devise_for :users
   root to: 'books#index'
@@ -10,5 +10,5 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
-  resources :relationships, only: %i(create destroy)
+  resources :friendships, only: %i(create destroy)
 end

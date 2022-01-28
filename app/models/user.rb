@@ -7,14 +7,14 @@ class User < ApplicationRecord
   has_one_attached :avatar
 
   # 能動的：フォローする
-  has_many :active_relationships, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
+  has_many :active_friendships, class_name: "Friendship", foreign_key: "follower_id", dependent: :destroy
   # 特定のユーザーがフォローしているユーザーを取得できるメソッド
-  # @user.active_relationships.map(&:followed) =>（ @userがフォローしているユーザーをmapで取得）
-  has_many :following, through: :active_relationships, source: :followed
+  # @user.active_friendships.map(&:followed) =>（ @userがフォローしているユーザーをmapで取得）
+  has_many :following, through: :active_friendships, source: :followed
 
   # 受動的：フォローされる
-  has_many :passive_relationships, class_name: "Relationship", foreign_key: "followed_id", dependent: :destroy
-  has_many :followers, through: :passive_relationships, source: :follower
+  has_many :passive_friendships, class_name: "Friendship", foreign_key: "followed_id", dependent: :destroy
+  has_many :followers, through: :passive_friendships, source: :follower
 
   # ユーザーをフォローする
   def follow(other_user)
@@ -23,7 +23,7 @@ class User < ApplicationRecord
 
   # ユーザーをフォロー解除する
   def unfollow(other_user)
-    active_relationships.find_by(followed_id: other_user.id).destroy
+    active_friendships.find_by(followed_id: other_user.id).destroy
   end
 
   # 現在のユーザーがフォローしていたらtrueを返す
