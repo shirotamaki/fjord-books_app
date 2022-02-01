@@ -1,5 +1,5 @@
 class ReportsController < ApplicationController
-  before_action :set_report, only: %i[ show edit update destroy ]
+  before_action :set_report, only: %i[ edit update destroy ]
 
   # GET /reports or /reports.json
   def index
@@ -8,11 +8,12 @@ class ReportsController < ApplicationController
 
   # GET /reports/1 or /reports/1.json
   def show
+    @report = Report.find(params[:id])
   end
 
   # GET /reports/new
   def new
-    @report = Report.new
+    @report = current_user.reports.new
   end
 
   # GET /reports/1/edit
@@ -21,7 +22,7 @@ class ReportsController < ApplicationController
 
   # POST /reports or /reports.json
   def create
-    @report = Report.new(report_params)
+    @report = current_user.reports.new(report_params)
 
     respond_to do |format|
       if @report.save
@@ -59,7 +60,7 @@ class ReportsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_report
-      @report = Report.find(params[:id])
+      @report = current_user.reports.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
