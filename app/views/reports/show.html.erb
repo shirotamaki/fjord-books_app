@@ -10,7 +10,7 @@
   <%= @report.content %>
 </p>
 
-<%= render partial: "comments/form", locals: {commentable: @report, user: @user} %>
+<%= render partial: "comments/form", locals: {commentable: @report} %>
 
 <% if current_user.id == @report.user_id %>
   <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
