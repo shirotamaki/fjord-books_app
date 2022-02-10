@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Books::CommentsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_commentable
@@ -6,7 +8,7 @@ class Books::CommentsController < ApplicationController
     @comment = @commentable.comments.new comment_params
     @comment.user = current_user
     @comment.save
-    redirect_to @commentable, notice: "Your comment was successfully posted."
+    redirect_to @commentable, notice: 'Your comment was successfully posted.'
   end
 
   private
