@@ -50,4 +50,3 @@ class ReportsController < ApplicationController
     params.require(:report).permit(:title, :content)
   end
 end
-

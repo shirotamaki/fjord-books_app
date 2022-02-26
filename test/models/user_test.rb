@@ -9,7 +9,7 @@ class UserTest < ActiveSupport::TestCase
     @relationship = Relationship.new(following: @alice, follower: @bob)
   end
 
-  test "#name_or_email" do
+  test '#name_or_email' do
     user = User.new(email: 'alice@example.com', name: '')
     assert_equal 'alice@example.com', user.name_or_email
 
