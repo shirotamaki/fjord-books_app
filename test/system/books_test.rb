@@ -8,7 +8,7 @@ class BooksTest < ApplicationSystemTestCase
     @book_two = books(:genba_rails)
 
     visit root_url
-    fill_in 'Eメール', with: 'carol@example.com'
+    fill_in 'Eメール', with: 'alice@example.com'
     fill_in 'パスワード', with: 'password'
     click_button 'ログイン'
   end
