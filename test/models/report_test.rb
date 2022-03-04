@@ -4,9 +4,9 @@ require 'test_helper'
 
 class ReportTest < ActiveSupport::TestCase
   setup do
-    @user = User.new(name: 'Alice', email: 'alice@example.com', password: 'password')
+    @user = users(:Alice)
     @today = Time.current
-    @report = Report.new(user: @user, title: 'Alice\'s memo', content: 'Alice\'s content', created_at: @today)
+    @report = reports(:today_weather)
   end
 
   test '#editable?' do

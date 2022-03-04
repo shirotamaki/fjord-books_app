@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 today_weather:
-  user: Carol
+  user: Alice
   title: 今日の天気
   content: 晴れです。
 
 tomorrow_weather:
-  user: Carol
+  user: Alice
   title: 明日の天気
   content: 大雪です。

@@ -8,7 +8,7 @@ class ReportsTest < ApplicationSystemTestCase
     @report_two = reports(:tomorrow_weather)
 
     visit root_url
-    fill_in 'Eメール', with: 'carol@example.com'
+    fill_in 'Eメール', with: 'alice@example.com'
     fill_in 'パスワード', with: 'password'
     click_button 'ログイン'
   end
