@@ -4,8 +4,3 @@ today_weather:
   user: Alice
   title: 今日の天気
   content: 晴れです。
-
-tomorrow_weather:
-  user: Alice
-  title: 明日の天気
-  content: 大雪です。

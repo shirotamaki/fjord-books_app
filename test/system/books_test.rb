@@ -5,7 +5,6 @@ require 'application_system_test_case'
 class BooksTest < ApplicationSystemTestCase
   setup do
     @book = books(:cherry_book)
-    @book_two = books(:genba_rails)
 
     visit root_url
     fill_in 'Eメール', with: 'alice@example.com'
@@ -38,9 +37,9 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on '編集', match: :prefer_exact
 
-    fill_in 'タイトル', with: @book_two.title
-    fill_in 'メモ', with: @book_two.memo
-    fill_in '著者', with: @book_two.author
+    fill_in 'タイトル', with: '現場で使えるRubyonRails5'
+    fill_in 'メモ', with: 'ステップバイステップで学べオススメです！'
+    fill_in '著者', with: '株式会社万葉'
     click_on '更新する'
 
     assert_text '本が更新されました。'
@@ -52,9 +51,13 @@ class BooksTest < ApplicationSystemTestCase
 
   test 'destroying a Book' do
     visit books_url
+    assert_text 'プロを目指す人のためのRuby入門'
+
     page.accept_confirm do
       click_on '削除', match: :first
     end
+
     assert_text '本が削除されました。'
+    assert_no_text 'プロを目指す人のためのRuby入門'
   end
 end
