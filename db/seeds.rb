@@ -52,6 +52,8 @@ Book.transaction do # rubocop:disable Metrics/BlockLength
   end
 end
 
+Relationship.destroy_all
+
 User.destroy_all
 
 User.transaction do
