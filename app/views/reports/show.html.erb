@@ -1,0 +1,16 @@
+<p>
+  <strong><%= Report.human_attribute_name(:title) %></strong>
+  <%= @report.title %>
+</p>
+
+<p>
+  <strong><%= Report.human_attribute_name(:content) %></strong>
+  <%= @report.content %>
+</p>
+
+<%= render partial: "comments/form", locals: {commentable: @report} %>
+
+<% if current_user.id == @report.user_id %>
+  <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
+<% end %>
+<%= link_to t('views.common.back'), reports_path %>

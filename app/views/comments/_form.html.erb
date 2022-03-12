@@ -1,0 +1,24 @@
+<h1><%= Comment.model_name.human %></h1>
+<% commentable.comments.each do |comment| %>
+  <ul>
+    <li><%= comment.content %></li>
+    <li><%= l comment.created_at %></li>
+    <% if comment.user.name.blank? %>
+      <li><%= comment.user.email %></li>
+    <% else %>
+      <li><%= comment.user.name %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_with(model: [commentable, Comment.new], local: true) do |form| %>
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_area :content, required: true %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

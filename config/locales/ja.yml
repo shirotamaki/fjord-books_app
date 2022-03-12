@@ -255,3 +255,6 @@ ja:
     registrations:
       edit:
         title: "アカウント編集"
+  time:
+    formats:
+      default: "%Y年%m月%d日 %H:%M:%S"
